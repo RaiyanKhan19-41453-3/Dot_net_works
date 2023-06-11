@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Teams";
+}
+<main aria-labelledby="title">
+    <h2 id="title">@ViewBag.Title</h2>
+    <h3>@ViewBag.Message</h3>
+    <style>
+        table {   
+            width: 100%;
+        }
+        td, th {
+            border: 1px solid;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Age</th>
+        </tr>
+        @foreach (var e in Model)
+        {
+            <tr>
+            <td>@e.emp_name</td>
+            <td>@e.expertise</td>
+            <td>@e.emp_age</td>
+            </tr>
+        }
+    </table>
+</main>
